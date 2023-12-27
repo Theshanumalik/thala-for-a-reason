@@ -37,9 +37,12 @@ function showReasult(userInput, win = true) {
   const outputCard = ouputTemplete.content.cloneNode(true);
   outputCard.querySelector("[data-user-input]").innerText = userInput;
   const previewLink = `${window.location.protocol}//${window.location.hostname}/preview.html?text=${userInput}`;
+  const tweetText = `Let's celebrate the magic of #ThalaForAReason together! Share your input and see what we all get. Maybe there's a hidden message for all of us?  Let's crack the code.  \n${previewLink}.  \n #theshanumalik @theshanumalik`;
   outputCard.querySelector(
     "[data-twitter]"
-  ).href = `https://twitter.com/intent/tweet?text=${previewLink}`;
+  ).href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    tweetText
+  )}`;
 
   outputCard
     .querySelector("[data-btn-copy-link]")

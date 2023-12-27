@@ -15,7 +15,10 @@ function generateThalaCard() {
   }
   element.classList.remove("blur");
   element.innerText = input;
-  twitter.href = `https://twitter.com/intent/tweet?text=${previewLink}`;
+  const tweetText = `Let's celebrate the magic of #ThalaForAReason together! Share your input and see what we all get. Maybe there's a hidden message for all of us?  Let's crack the code.  \n${previewLink}.  \n #theshanumalik @theshanumalik`;
+  twitter.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    tweetText
+  )}`;
   document
     .querySelector("[data-btn-copy-link]")
     .addEventListener("click", () => {
