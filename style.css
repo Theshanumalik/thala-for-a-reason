@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #121212;
+  --secondary: #333333;
+  --font-color: #fff;
+  font-size: 1rem;
+}
+
+body {
+  background: var(--primary);
+  color: var(--font-color);
+}
+main.preview {
+  justify-content: center;
+  position: relative;
+}
+
+.action {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+.action a {
+  background-color: #ff4726;
+  color: var(--font-color);
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 1rem;
+}
+main {
+  width: 100%;
+  height: calc(100vh - 70px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main > h1 {
+  margin-top: 2rem;
+}
+
+main form {
+  display: flex;
+  gap: 0.3rem;
+  background: var(--secondary);
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 0.3rem;
+}
+main form input {
+  flex: 1;
+}
+main form input,
+main form button {
+  background: none;
+  border: 0;
+  outline: 0;
+  color: var(--font-color);
+}
+main form button {
+  background: #ff4726;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+#lose {
+  border-radius: 1rem;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+}
+
+.output {
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--secondary);
+  width: 100%;
+  max-width: 480px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+main.preview .output {
+  margin: 0;
+}
+.output h3 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  transition: 1s ease 0.5s;
+}
+.output h3.blur {
+  filter: blur(20px);
+}
+.output p {
+  font-size: 1.2rem;
+}
+.output .share {
+  display: flex;
+  justify-content: space-between;
+}
+.share span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.share ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.share ul li a,
+.share ul li button {
+  color: var(--font-color);
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.share ul li button {
+  border: none;
+  outline: 0;
+  padding: 0;
+  background: none;
+}
+
+.share ul li a:hover,
+.share ul li button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 442px) {
+  :root {
+    font-size: 10px;
+  }
+}
+footer {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+footer h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+footer ul a {
+  color: var(--font-color);
+  font-size: 1.3rem;
+}
+footer ul a:hover {
+  opacity: 0.8;
+}
